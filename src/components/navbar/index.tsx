@@ -35,7 +35,7 @@ export default function Navbar() {
     return (
         <header className="font-twCent w-full bg-white flex justify-center">
             {/* Desktop Nav */}
-            <div className="py-4 space-y-[40px] max-w-[1300px] w-full hidden md:block px-[120px]">
+            <div className="py-4 space-y-8 max-w-[1300px] w-full hidden md:block px-[120px]">
                 {/* Logo */}
                 <div className="text-lg font-bold">
                     <Link href="/">
@@ -66,7 +66,7 @@ export default function Navbar() {
 
             {/* MOBILE  */}
             <div className='w-full max-md:block hidden'>
-                <div className='w-full flex justify-between px-[25px] py-[12px] z-20'>
+                <div className='w-full flex justify-between px-6 py-6 z-20'>
                     <div className="text-lg font-bold z-20">
                         <Link href="/">
                             <Image src='/logo.svg' alt='logo' width={100} height={80} />
@@ -84,10 +84,10 @@ export default function Navbar() {
                             animate={{ y: 0 }}
                             exit={{ y: '-100%' }}
                             transition={{ duration: 0.3 }}
-                            className="fixed top-0 right-0 h-screen w-full bg-white flex flex-col items-start justify-center z-50 px-[25px] z-10"
+                            className="fixed top-0 right-0 h-screen w-full bg-white flex flex-col items-start justify-center z-10 px-6"
                         >
 
-                            <nav className="flex flex-col space-y-[20px] text-xl font-bold text-left">
+                            <nav className="flex flex-col space-y-6 text-xl font-bold text-left">
                                 {
                                     NAVIGATION.map(item => (
                                         <Link key={item.href} href={item.href}>

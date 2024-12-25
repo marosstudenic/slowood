@@ -1,3 +1,4 @@
+import { MainOffer } from "@/components/MainOffer";
 import MotionSlider, { SlideShowItem } from "@/components/MotionSlider";
 import Navbar from "@/components/navbar";
 
@@ -22,9 +23,14 @@ export default function Home() {
   return (
     <main className="bg-white font-twCent">
       <Navbar />
-      <section className="w-full max-w-[1300px] mx-auto px-[120px] max-md:px-0">
+      <div className="w-full max-w-[1300px] mx-auto px-[120px] max-md:px-0">
         <MotionSlider slides={slides} />
-      </section>
+        <div className="mt-10">
+          <MainOffer />
+        </div>
+      </div>
+      {/* <MainOffer /> */}
+
     </main>
   );
 }

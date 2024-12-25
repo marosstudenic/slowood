@@ -68,9 +68,9 @@ export default function MotionSlider({ slides }: { slides: SlideShowItem[] }) {
                         className="object-cover brightness-50"
                     />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white space-y-4">
-                        <h2 className="text-[50px] max-md:text-[36px] max-md:max-w-60 leading-[40px] font-bold uppercase font-twCent tracking-wider text-center">{slides[current].text}</h2>
+                        <h2 className="text-5xl max-md:text-3xl max-md:max-w-60 leading-snug font-bold uppercase font-twCent tracking-wider text-center">{slides[current].text}</h2>
                         <LinkButton link={slides[current].buttonLink} className=''>
-                            <p className='uppercase tracking-widest text-[16px] font-bold max-md:text-[12px]'>
+                            <p className='uppercase tracking-widest text-md font-bold max-md:text-xs'>
                                 {slides[current].buttonText}
                             </p>
                         </LinkButton>
