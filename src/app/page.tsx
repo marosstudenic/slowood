@@ -1,3 +1,5 @@
+import { AboutUs } from "@/components/AboutUs";
+import { Footer } from "@/components/Footer";
 import { MainOffer } from "@/components/MainOffer";
 import MotionSlider, { SlideShowItem } from "@/components/MotionSlider";
 import Navbar from "@/components/navbar";
@@ -23,7 +25,7 @@ const slides: SlideShowItem[] = [
 
 export default function Home() {
   return (
-    <main className="bg-white font-twCent max-md:pt-20 pt-28 pb-96">
+    <main className="bg-white font-twCent max-md:pt-20 pt-28">
       <Navbar />
       <div className="w-full max-w-[1300px] mx-auto px-[120px] max-md:px-0">
         <MotionSlider slides={slides} />
@@ -37,9 +39,13 @@ export default function Home() {
         <div className="mt-12 max-md:mt-0">
           <Studio />
         </div>
-      </div>
-      {/* <MainOffer /> */}
 
+        <div className="mt-16">
+          <AboutUs />
+        </div>
+
+      </div>
+      <Footer />
     </main>
   );
 }

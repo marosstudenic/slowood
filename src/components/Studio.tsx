@@ -4,7 +4,7 @@ export const Studio = () => {
     return (
         <div>
             <h2 className="text-xl uppercase font-bold tracking-wide pb-2 max-md:hidden">Štúdio</h2>
-            <div className="flex flex-col py-4 items-center max-md:justify-between justify-center  bg-[url('/images/studio.jpeg')] bg-cover bg-center h-80 max-md:screen ">
+            <div className="flex flex-col py-4 items-center max-md:justify-between justify-center  bg-[url('/images/studio.jpeg')] bg-cover bg-center h-80 max-md:h-screen ">
                 <div className="flex justify-start w-full px-6 md:hidden">
                     <h2 className="text-md uppercase font-bold tracking-wide">Štúdio</h2>
                 </div>
