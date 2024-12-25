@@ -2,6 +2,7 @@ import { MainOffer } from "@/components/MainOffer";
 import MotionSlider, { SlideShowItem } from "@/components/MotionSlider";
 import Navbar from "@/components/navbar";
 import { Slowoodplus } from "@/components/Slowoodplus";
+import { Studio } from "@/components/Studio";
 
 const slides: SlideShowItem[] = [
   {
@@ -31,6 +32,10 @@ export default function Home() {
         </div>
         <div className="mt-16">
           <Slowoodplus />
+        </div>
+
+        <div className="mt-12 max-md:mt-0">
+          <Studio />
         </div>
       </div>
       {/* <MainOffer /> */}
