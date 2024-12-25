@@ -1,10 +1,21 @@
 // components/Navbar.js
 "use client";
 import TwoLineHamburgerIcon from '@/components/navbar/TwoLineHamburgerIcon';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+
+const parentVariants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: "-4rem" },
+};
+
+const childVariants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: "-2rem" },
+};
+
 
 const NAVIGATION = [
     {
@@ -31,9 +42,36 @@ const NAVIGATION = [
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const { scrollY } = useScroll();
+    const [hidden, setHidden] = useState(false);
+    const [prevScroll, setPrevScroll] = useState(0);
+
+    function update(latest: number, prev: number): void {
+        if (latest < prev) {
+            setHidden(false);
+            console.log("visible");
+        } else if (latest > 100 && latest > prev) {
+            setHidden(true);
+            console.log("hidden");
+        }
+    }
+
+    useMotionValueEvent(scrollY, "change", (latest: number) => {
+        update(latest, prevScroll);
+        console.log(latest);
+        setPrevScroll(latest);
+    });
+
 
     return (
-        <header className="font-twCent w-full bg-white flex justify-center">
+        <motion.nav className="font-twCent w-full bg-white flex justify-center fixed top-0 z-50"
+            animate={hidden ? "hidden" : "visible"}
+            variants={parentVariants}
+            transition={{
+                ease: [0.1, 0.25, 0.3, 1],
+                duration: 0.3,
+                staggerChildren: 0.05,
+            }}>
             {/* Desktop Nav */}
             <div className="py-4 space-y-8 max-w-[1300px] w-full hidden md:block px-[120px]">
                 {/* Logo */}
@@ -105,6 +143,6 @@ export default function Navbar() {
             </div>
 
 
-        </header>
+        </motion.nav>
     )
 }

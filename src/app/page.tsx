@@ -21,7 +21,7 @@ const slides: SlideShowItem[] = [
 
 export default function Home() {
   return (
-    <main className="bg-white font-twCent">
+    <main className="bg-white font-twCent max-md:pt-20 pt-28">
       <Navbar />
       <div className="w-full max-w-[1300px] mx-auto px-[120px] max-md:px-0">
         <MotionSlider slides={slides} />
