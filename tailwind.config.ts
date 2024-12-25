@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: {
+          text: "#5f5f5f",
+        }
       },
       fontFamily: {
         twCent: ['var(--font-tw-cent)']
