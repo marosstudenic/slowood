@@ -49,16 +49,13 @@ export default function Navbar() {
     function update(latest: number, prev: number): void {
         if (latest < prev) {
             setHidden(false);
-            console.log("visible");
         } else if (latest > 100 && latest > prev) {
             setHidden(true);
-            console.log("hidden");
         }
     }
 
     useMotionValueEvent(scrollY, "change", (latest: number) => {
         update(latest, prevScroll);
-        console.log(latest);
         setPrevScroll(latest);
     });
 
