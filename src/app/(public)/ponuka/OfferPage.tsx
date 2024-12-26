@@ -1,4 +1,5 @@
 import { BackButton } from "@/components/BackButton";
+import { MamZaujem } from "@/components/MamZaujem";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -21,6 +22,7 @@ export const OfferPage = ({
     offerOptions,
     actions,
     illustrationImages,
+    showContant = false
 }: {
     heroImage: string;
     title: string;
@@ -28,18 +30,19 @@ export const OfferPage = ({
     offerOptions?: OfferOption[];
     actions?: ReactNode,
     illustrationImages?: string[];
+    showContant?: boolean;
 }
 ) => {
     return (
         <main className="py-6">
-            <div className="px-6 pb-6">
+            <div className="px-6 pb-6 md:px-0 md:pb-2">
                 <BackButton />
                 <h2 className="text-2xl font-bold uppercase pt-2">{title}</h2>
             </div>
-            <Image src={heroImage} alt={title} width={400} height={400} className="hidden md:block" />
+            <Image src={heroImage} alt={title} width={400} height={400} className="hidden md:block w-full h-96 object-cover md:pb-4" />
             <section className="flex flex-col gap-10 md:grid grid-cols-2">
                 {columns.map((column, index) => (
-                    <div key={index} className="px-6">
+                    <div key={index} className="px-6 md:px-0">
                         <h3 className="font-bold text-lg pb-2 uppercase">{column.title}</h3>
                         <div className="text-[#5f5f5f]">{column.textChild}</div>
                     </div>
@@ -48,11 +51,11 @@ export const OfferPage = ({
 
             {offerOptions && offerOptions.length > 0 && (
                 <section className="py-12">
-                    <h3 className="uppercase text-xl px-6 font-bold">ponuka</h3>
+                    <h3 className="uppercase text-xl px-6 md:px-0 font-bold md:pb-2">ponuka</h3>
                     <div className="flex flex-col md:grid grid-cols-3 gap-8">
                         {offerOptions.map((option, index) => (
-                            <Link href={option.link} key={index} className="flex flex-col-reverse md:flex-col items-start">
-                                <Image src={option.image} alt={option.title} width={400} height={400} />
+                            <Link href={option.link} key={index} className="flex flex-col-reverse md:flex-col items-start h-full">
+                                <Image src={option.image} alt={option.title} width={400} height={400} className="h-full" />
                                 <p className="px-6 md:px-0 uppercase py-2">{option.title}</p>
                             </Link>
                         ))}
@@ -60,16 +63,22 @@ export const OfferPage = ({
                 </section>
             )}
 
-            {actions}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-0 pt-8">
+                {actions}
+                {showContant && (
+                    <MamZaujem />
+                )}
+            </div >
+
 
             {illustrationImages && illustrationImages.length > 0 && (
-                <div className="py-6">
+                <div className="py-6 md:hidden">
                     {illustrationImages?.map((image, index) => (
                         <Image key={index} src={image} alt={title} width={400} height={400} />
                     ))}
                 </div>
             )}
-        </main>
+        </main >
     )
 
 }
