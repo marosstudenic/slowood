@@ -1,18 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const Newsletter = () => {
-    return (
-        <div>
-            <h2 className="font-bold text-md text-white uppercase">newsletter</h2>
-
-            <form className="flex flex-col">
-                <input type="email" placeholder="Váš email" className="bg-transparent border-b border-white text-white py-2  mb-2  focus:outline-none focus:border-b-2" />
-                <button className="border border-white text-white py-2 px-4">Prihlásiť sa</button>
-            </form>
-        </div>
-    );
-}
+import { Newsletter } from "./Newsletter";
 
 export const Footer = () => {
     return (

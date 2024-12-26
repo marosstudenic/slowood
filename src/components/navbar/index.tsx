@@ -64,7 +64,7 @@ export default function Navbar() {
 
 
     return (
-        <motion.nav className="font-twCent w-full bg-white flex justify-center fixed top-0 z-50"
+        <motion.nav className="font-twCent w-full bg-white flex justify-center fixed top-0 z-50 shadow-sm"
             animate={hidden ? "hidden" : "visible"}
             variants={parentVariants}
             transition={{
