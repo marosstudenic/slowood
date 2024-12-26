@@ -20,14 +20,7 @@ export function IframeCover({ iframeUrl, coverImageUrl }: { iframeUrl: string; c
                 <Image
                     src={coverImageUrl}
                     alt="Cover"
-                    style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        cursor: "pointer",
-                        position: "absolute",
-                        zIndex: 1,
-                    }}
+                    className="object-cover w-full h-full cursor-pointer z-[1]"
                 />
             </div>
         )
@@ -35,21 +28,14 @@ export function IframeCover({ iframeUrl, coverImageUrl }: { iframeUrl: string; c
 
     return (
         <div
-            style={{ position: "relative", width: "100%", height: "100%" }}
+            className="relative h-full w-full"
             key="3dwarehouse"
         >
             {!showIframe && (
                 <motion.img
                     src={coverImageUrl}
                     alt="Cover"
-                    style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        cursor: "pointer",
-                        position: "absolute",
-                        zIndex: 1,
-                    }}
+                    className="object-cover w-full h-full cursor-pointer z-[1] absolute"
                     onClick={handleClick}
                 />
             )}
@@ -74,31 +60,11 @@ export function IframeCover({ iframeUrl, coverImageUrl }: { iframeUrl: string; c
             {!showIframe && (
                 <div
                     onClick={handleClick}
-                    style={{
-                        position: "absolute",
-                        bottom: "25px",
-                        left: "25px",
-                        textAlign: "center",
-                        width: "207px",
-                        height: "58px",
-                        backgroundColor: "#000",
-                        fontFamily: "Tw Cen MT Regular",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignContent: "center",
-                        alignItems: "center",
-                        zIndex: 3,
-                    }}
+                    className="absolute bottom-4 left-4 bg-black p-2  cursor-pointer z-10"
                 >
                     <p
-                        style={{
-                            fontSize: "16px",
-                            textTransform: "uppercase",
-                            fontFamily: "Tw Cen MT Bold",
-                            letterSpacing: "0.1em",
-                            color: "#FFF",
-                            fontWeight: "bold",
-                        }}
+
+                        className="text-white uppercase text-sm tracking-wider"
                     >
                         Prezrieť v 3D
                     </p>

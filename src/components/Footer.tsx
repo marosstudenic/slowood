@@ -5,7 +5,7 @@ import { Newsletter } from "./Newsletter";
 export const Footer = () => {
     return (
         <footer className="bg-black w-full py-8">
-            <div className="max-w-[1300px] px-6 md:px-[120px] flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-20 lg:grid-cols-5 mx-auto justify-start">
+            <div className="max-w-[1300px] px-6 md:px-[120px] flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-20 lg:grid-cols-6 mx-auto justify-start">
                 <div className="md:hidden block">
                     <Newsletter />
                 </div>
@@ -50,7 +50,7 @@ export const Footer = () => {
                     </div>
                 </div>
 
-                <div className="md:block hidden">
+                <div className="md:block hidden col-span-2">
                     <Newsletter />
                 </div>
 

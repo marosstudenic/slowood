@@ -4,7 +4,8 @@ import TwoLineHamburgerIcon from '@/components/navbar/TwoLineHamburgerIcon';
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const parentVariants = {
     visible: { opacity: 1, y: 0 },
@@ -46,6 +47,13 @@ export default function Navbar() {
     const [hidden, setHidden] = useState(false);
     const [prevScroll, setPrevScroll] = useState(0);
 
+
+    const pathname = usePathname();
+
+    useEffect(() => {
+        setIsOpen(false);
+    }, [pathname]);
+
     function update(latest: number, prev: number): void {
         if (latest < prev) {
             setHidden(false);
@@ -58,6 +66,10 @@ export default function Navbar() {
         update(latest, prevScroll);
         setPrevScroll(latest);
     });
+
+
+    // add listener on route change and close it if it's open
+
 
 
     return (

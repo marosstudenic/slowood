@@ -65,7 +65,7 @@ export default function MotionSlider({ slides }: { slides: SlideShowItem[] }) {
                         src={slides[current].image}
                         alt={slides[current].text}
                         fill
-                        className="object-cover brightness-50"
+                        className="object-cover brightness-75"
                     />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white space-y-4">
                         <h2 className="text-5xl max-md:text-3xl max-md:max-w-60 leading-snug font-bold uppercase font-twCent tracking-wider text-center">{slides[current].text}</h2>
