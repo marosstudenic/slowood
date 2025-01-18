@@ -9,12 +9,6 @@ interface Column {
   textChild: ReactNode
 }
 
-interface OfferOption {
-  image: string;
-  title: string;
-  link: string;
-}
-
 
 export const DetailOfferPage = ({
   heroImage,
