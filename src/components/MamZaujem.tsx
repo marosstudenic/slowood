@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 import { LinkButton } from "./LinkButton"
 
-export const MamZaujem = ({ isRow = false }: { isRow: boolean }) => {
+export const MamZaujem = ({ isRow = false }: { isRow?: boolean }) => {
     return (
         <div className="space-y-2">
             <h3 className="text-black text-lg uppercase font-bold">Mám záujem</h3>
