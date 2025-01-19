@@ -13,13 +13,6 @@ const slides: SlideShowItem[] = [
     buttonText: 'Zistiť viac',
   },
   {
-    id: 2,
-    text: "Prístrešky",
-    image: '/images/pristresok.jpeg',
-    buttonLink: '/ponuka/pristresok',
-    buttonText: 'Zistiť viac',
-  },
-  {
     id: 3,
     text: "Pergoly",
     image: '/images/pergola/pergola-na-mieru.jpeg',
