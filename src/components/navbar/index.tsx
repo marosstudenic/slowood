@@ -23,10 +23,10 @@ const NAVIGATION = [
     href: '/',
     label: 'HLAVNÁ PONUKA',
   },
-  {
-    href: '/slowood-plus',
-    label: 'SLOWOOD PLUS',
-  },
+  // {
+  //   href: '/slowood-plus',
+  //   label: 'SLOWOOD PLUS',
+  // },
   {
     href: '/studio',
     label: 'ŠTÚDIO',
