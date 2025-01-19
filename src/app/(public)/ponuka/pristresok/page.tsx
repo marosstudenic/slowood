@@ -31,7 +31,7 @@ const AltanokPage = () => {
       ]}
       offerOptions={[
         {
-          image: '/images/pristresok/pristresok-na-mieru.jpeg',
+          image: '/images/pristresok/pristresok-na-mieru.png',
           title: "prístrešok na mieru",
           link: "/ponuka/pristresok/na-mieru"
         },
