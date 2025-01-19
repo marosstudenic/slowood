@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -47,7 +48,10 @@ export const MainOffer = () => {
               height={400}
               className="object-cover w-full h-40"
             />
-            <p className="max-md:max-w-60 uppercase font-twCent tracking-wider text-md max-md:px-6 max-md:pb-4 pt-2">{item.title}</p>
+            <div className="max-md:w-full max-md:px-6 max-md:pb-4 pt-2 flex justify-between">
+              <p className="uppercase font-twCent tracking-wider text-md ">{item.title}</p>
+              <p className="underline uppercase text-sm max-md:block hidden"> <ArrowRight strokeWidth={1} /></p>
+            </div>
           </Link>
         ))}
       </div>

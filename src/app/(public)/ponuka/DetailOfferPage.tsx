@@ -59,7 +59,7 @@ export const DetailOfferPage = ({
           <h3 className="font-bold text-lg pb-2 uppercase pt-8 px-6 md:px-0">Ilustrančé fotografie</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {illustrationImages?.map((image, index) => (
-              <Image key={index} src={image} alt={title} width={800} height={800} className="object-cover h-40 hover:scale-150 transition-all" />
+              <Image key={index} src={image} alt={title} width={1200} height={1200} className="object-cover h-40  max-md:h-60 hover:scale-150 transition-all" />
             ))}
           </div>
         </div>

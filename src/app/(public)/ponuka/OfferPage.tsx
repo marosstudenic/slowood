@@ -1,5 +1,6 @@
 import { BackButton } from "@/components/BackButton";
 import { MamZaujem } from "@/components/MamZaujem";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -56,7 +57,10 @@ export const OfferPage = ({
             {offerOptions.map((option, index) => (
               <Link href={option.link} key={index} className="flex flex-col-reverse  md:flex-col items-start h-full hover:scale-105 transition-transform duration-300">
                 <Image src={option.image} alt={option.title} width={400} height={400} className="h-60 object-cover" />
-                <p className="px-6 md:px-0 uppercase py-2">{option.title}</p>
+                <div className="flex justify-between items-center w-full px-6 md:px-0  py-2">
+                  <p className="uppercase">{option.title}</p>
+                  <p className="underline uppercase text-sm max-md:block hidden"> <ArrowRight strokeWidth={1} /></p>
+                </div>
               </Link>
             ))}
           </div>
