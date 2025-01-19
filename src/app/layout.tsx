@@ -12,7 +12,7 @@ const twCent = localFont({
 
 export const metadata: Metadata = {
   title: "Slowood - dizajnové výrobky z dreva",
-  description: "",
+  description: "Altánky, prístrešky, pergoly, záhradné domčeky pre vašu záhradu v elegantnom štýle.",
 };
 
 
@@ -22,7 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="sk">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body
         className={`${twCent.variable} antialiased`}
       >

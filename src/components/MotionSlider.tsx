@@ -49,23 +49,6 @@ export default function MotionSlider({ slides }: { slides: SlideShowItem[] }) {
   }, [slides.length]);
 
 
-  useEffect(() => {
-    const preloadImages = async () => {
-      for (const slide of slides) {
-        const img = new window.Image();
-        img.src = slide.image;
-
-        // Optionally wait for each image to load (if required)
-        await new Promise((resolve, reject) => {
-          img.onload = resolve;
-          img.onerror = reject;
-        });
-      }
-    };
-
-    preloadImages().catch(console.error); // Log any errors
-  }, [slides]);
-
   return (
     <div className="relative w-full h-[400px] max-md:h-[90dvh] overflow-hidden bg-black">
       <AnimatePresence custom={direction}>
