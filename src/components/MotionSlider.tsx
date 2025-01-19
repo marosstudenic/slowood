@@ -1,7 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { LinkButton } from './LinkButton';
 
 export interface SlideShowItem {
@@ -38,15 +38,33 @@ export default function MotionSlider({ slides }: { slides: SlideShowItem[] }) {
     return () => clearInterval(interval);
   }, [])
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setDirection(1)
     setCurrent((prev) => (prev + 1) % slides.length)
-  }
+  }, [slides.length]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setDirection(-1)
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length)
-  }
+  }, [slides.length]);
+
+
+  useEffect(() => {
+    const preloadImages = async () => {
+      for (const slide of slides) {
+        const img = new window.Image();
+        img.src = slide.image;
+
+        // Optionally wait for each image to load (if required)
+        await new Promise((resolve, reject) => {
+          img.onload = resolve;
+          img.onerror = reject;
+        });
+      }
+    };
+
+    preloadImages().catch(console.error); // Log any errors
+  }, [slides]);
 
   return (
     <div className="relative w-full h-[400px] max-md:h-[90dvh] overflow-hidden bg-black">
@@ -65,6 +83,7 @@ export default function MotionSlider({ slides }: { slides: SlideShowItem[] }) {
             src={slides[current].image}
             alt={slides[current].text}
             fill
+            unoptimized
             className="object-cover brightness-75"
             priority
           />
