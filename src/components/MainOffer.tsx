@@ -13,7 +13,7 @@ const offer = [
     link: '/ponuka/drevene-obklady',
   },
   {
-    image: '/images/zahradny-domcek.jpeg',
+    image: '/images/zahradny-domcek/zahradny-domcek-na-mieru.jpeg',
     title: "zahradný domček",
     link: '/ponuka/zahradny-domcek',
   },
