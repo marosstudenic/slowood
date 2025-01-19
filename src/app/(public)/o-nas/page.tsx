@@ -1,5 +1,4 @@
 import { BackButton } from "@/components/BackButton";
-import { MamZaujem } from "@/components/MamZaujem";
 import Image from "next/image";
 
 
@@ -11,15 +10,12 @@ export default function Page(
         <BackButton />
         <h1 className="text-2xl font-bold uppercase pt-2">O nás</h1>
       </div>
-      <div className="md:pb-6 h-[550px]">
+      <div className="md:pb-6 h-[550px] max-md:hidden">
         <Image src="/images/o-nas/o-nas.jpeg" alt={"slowood"} className="h-full" height={1200} width={1200} />
       </div>
       <h2 className="text-xl font-bold uppercase pt-2 block md:hidden px-6 pb-6">O nás</h2>
       <section className="flex flex-col gap-10 md:grid grid-cols-2">
         <div className="px-6 md:px-0">
-          <div className="pb-6 block md:hidden">
-            <MamZaujem />
-          </div>
           <div className="">
             <h3 className="font-bold text-lg pb-2 uppercase">Čo je slowood</h3>
             <div className="text-[#5f5f5f]">
@@ -49,9 +45,9 @@ export default function Page(
         </div>
       </section>
 
-      <section className="flex flex-col gap-10 md:grid grid-cols-2 mt-20">
+      <section className="flex flex-col gap-10 md:grid grid-cols-2 mt-20 pb-20">
         <Image src="/images/o-nas/profil.png" height={1000} width={1000} className="h-full w-full object-cover" alt="Profile picture slowood" />
-        <div className="flex justify-between text-[#5f5f5f] flex-col gap-10">
+        <div className="flex justify-between text-[#5f5f5f] flex-col gap-10 max-md:px-6">
           <div className="space-y-4">
             <p className="">Od malička ma fascinovalo drevo. Už ako dieťa som trávil hodiny v dielni môjho starého otca, kde som sa učil základom práce s drevom. Miloval som sledovať, ako obyčajný kus dreva pod rukami získava tvar a stáva sa niečím funkčným a krásnym.</p>
             <p>Táto vášeň ma neopustila ani neskôr. Po rokoch skúseností a učenia som si uvedomil, že chcem spojiť lásku k drevu s dizajnom a vytvárať jedinečné stavby, ktoré ľuďom prinášajú radosť. Od pergol a prístreškov až po altánky a terasy, každá moja realizácia je navrhnutá s dôrazom na detaily a harmóniu s okolím.</p>
