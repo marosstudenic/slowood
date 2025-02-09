@@ -49,7 +49,7 @@ export const Footer = () => {
           <h2 className="font-bold text-md text-white uppercase">Kontakty</h2>
           <div className="text-white text-sm flex flex-col">
             <Link href="mailto: slowood@gmail.com"> slowood@gmail.com</Link>
-            <Link href="tel:+421912987654"> +421 905 517 382            </Link>
+            <Link href="tel:+421905517382"> +421 905 517 382            </Link>
             <Link href="https://www.instagram.com/slowood.sk/" target="__blank"> Instagram</Link>
           </div>
         </div>

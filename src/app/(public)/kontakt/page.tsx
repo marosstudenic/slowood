@@ -13,7 +13,7 @@ const Page = () => {
       <section className="flex flex-col gap-10 md:grid grid-cols-2">
         <div className="px-6 md:px-0">
           <div className="text-[#5f5f5f]">
-            <p>+421 948 123 456</p>
+            <p>+421 905 517 382</p>
             <p>slowood@gmail.com </p>
             <p>Nad Ostrovom 7a </p>
             <p> 841 04 Karlova Ves, Bratislava</p>
