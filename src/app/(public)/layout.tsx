@@ -1,5 +1,6 @@
 import { Footer } from "@/components/Footer";
 import Navbar from "@/components/navbar";
+import { QuoteModalShow } from "@/components/QuoteModalShow";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
     return (
@@ -9,6 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {children}
             </div>
             <Footer />
+            <QuoteModalShow />
         </main>
     );
 }

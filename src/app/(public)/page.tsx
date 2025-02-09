@@ -41,7 +41,6 @@ const slides: SlideShowItem[] = [
     buttonLink: '/ponuka/pristresok',
   },
   {
-
     id: 6,
     image: '/images/zahradny-domcek/zahradny-domcek-na-mieru.jpeg',
     text: "zahradné domčeky",
