@@ -29,7 +29,6 @@ const SuccessMessage = ({ closeModal }: { closeModal: () => void }) => {
 
 export const QuoteModal: React.FC<QuoteModalProps> = ({ onClose }) => {
     const [showEmailInput, setShowEmailInput] = useState(false);
-    const [email, setEmail] = useState("");
     const [isSending, setIsSending] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
