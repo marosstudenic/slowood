@@ -64,7 +64,7 @@ const AltanokPage = () => {
             actions={
                 <div className="px-6 py-6 md:px-0">
                     <h2 className="text-xl uppercase font-bold pb-2">Ako na terasu</h2>
-                    <LinkButton link="/files/ako-zvolit-drevene-obklady.pdf" text={"Stiahnuť pdf"} color="black" weight="thin" className="" />
+                    <LinkButton link="/files/Terasy.pdf" text={"Stiahnuť pdf"} color="black" weight="thin" className="" />
                 </div>
             }
             showContant={true}
