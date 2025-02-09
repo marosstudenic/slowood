@@ -67,7 +67,7 @@ export const OfferPage = ({
         </section>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-0 pt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-0 pt-8">
         {actions}
         {showContant && (
           <MamZaujem />

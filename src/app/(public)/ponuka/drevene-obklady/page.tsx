@@ -36,7 +36,7 @@ const AltanokPage = () => {
       ]}
 
       actions={
-        <div className="md:px-6 py-6">
+        <div className="py-6">
           <h2 className="text-xl uppercase font-bold pb-2">Aký obklad zvoliť</h2>
           <LinkButton link="/files/ako-zvolit-drevene-obklady.pdf" text={"Stiahnuť pdf"} color="black" weight="thin" className="" />
         </div>
