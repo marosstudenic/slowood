@@ -59,7 +59,7 @@ export async function sendEmail({ name, email, phone, message }: { name: string,
   const STUDENIC_MAIL = 'studenic.maros@gmail.com';
 
   // TODO add recipient email
-  const promises = [STUDENIC_MAIL].map((mail) => new Promise((resolve, reject) => {
+  const promises = [STUDENIC_MAIL, RECIPIENT_MAIL].map((mail) => new Promise((resolve, reject) => {
     // send mail
     transporter.sendMail(mailData(mail), (err, info) => {
       if (err) {
