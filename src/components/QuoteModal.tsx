@@ -13,9 +13,9 @@ const ErrorMessage = () => {
 
 const SuccessMessage = ({ closeModal }: { closeModal: () => void }) => {
 
-    return <div className='py-12'>
+    return <div className='py-2'>
         <p className="font-twCent text-xl font-bold">Ste bližšie k Vášej vysnívanej stavbe z dreva.</p>
-        <p className="text-black pb-2">
+        <p className="text-black pb-8">
             Váš kontakt bol zaznamenaný, čoskoro sa Vám ozveme.
         </p>
 
