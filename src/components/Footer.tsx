@@ -12,13 +12,13 @@ export const Footer = () => {
         <div>
           <Image src="/logo-white.svg" alt="logo" width={100} height={80} className="pb-4 hidden md:block" />
           <div className="text-sm text-white">
-            <p>SloWood Studio s.r.o.</p>
+            <p>SloWood Studio</p>
             <p>Nad Ostrovom 7a, 841 04
               Karlova Ves, Bratislava
               Slovenská republika</p>
-            <p>
+            {/* <p>
               IČO: 12 345 678
-            </p>
+            </p> */}
             <p className="hidden md:block">
               © 2024 slowood.sk
             </p>
@@ -49,7 +49,7 @@ export const Footer = () => {
           <h2 className="font-bold text-md text-white uppercase">Kontakty</h2>
           <div className="text-white text-sm flex flex-col">
             <Link href="mailto: slowood@gmail.com"> slowood@gmail.com</Link>
-            <Link href="tel:+421912987654"> +421 912 987 654</Link>
+            <Link href="tel:+421912987654"> +421 905 517 382            </Link>
             <Link href="https://www.instagram.com/slowood.sk/" target="__blank"> Instagram</Link>
           </div>
         </div>

@@ -9,7 +9,7 @@ export const Studio = () => {
                     <h2 className="text-md uppercase font-bold tracking-wide">Štúdio</h2>
                 </div>
                 <div className="space-y-4">
-                    <h2 className="text-4xl text-white tracking-wide text-center"> Dekoratívnô <br />
+                    <h2 className="text-4xl text-white tracking-wide text-center uppercase"> Dekoratívnô <br />
                         Aj Funkčnô
                     </h2>
                     <div>

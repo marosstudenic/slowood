@@ -5,7 +5,7 @@ export const Slowoodplus = () => {
     return (
         <div className="max-md:bg-[#f6f6f0] py-6">
             <h2 className="text-twCent text-xl font-bold pb-2 uppercase tracking-wide max-md:px-6">Slowood plus</h2>
-            <div className="grid grid-cols-2 max-md:grid-cols-1 gap-4">
+            <div className="grid grid-cols-2 max-md:grid-cols-1 gap-8 max-md:gap-4">
                 <div className="w-full h-full max-md:hidden">
                     <Image src='/images/slowoodplus.jpeg' alt='slowoodplus' width={400} height={400} className="object-cover w-full h-full" />
                 </div>
