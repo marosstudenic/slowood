@@ -6,9 +6,9 @@ export default function Page(
 ) {
   return (
     <main className="py-0 md:py-6">
-      <div className="px-6 pb-6 md:px-0 md:pb-2 hidden md:block">
+      <div className="px-6 pb-2 md:px-0 md:pb-2 max-md:pt-4">
         <BackButton />
-        <h1 className="text-2xl font-bold uppercase pt-2">O nás</h1>
+        <h1 className="text-2xl font-bold uppercase pt-2 max-md:hidden">O nás</h1>
       </div>
       <div className="md:pb-6 h-[550px] max-md:hidden">
         <Image src="/images/o-nas/o-nas.jpeg" alt={"slowood"} className="h-full" height={1200} width={1200} />

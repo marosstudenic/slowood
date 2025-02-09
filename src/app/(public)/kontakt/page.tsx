@@ -22,7 +22,7 @@ const Page = () => {
         </div>
 
         <div>
-          <p className="px-6 text-primary-text">Snívate o dizajnovom exteriérovom objekte, alebo o unikátnych interiérových kusoch nábytku? Kontaktujte nás a my Vám radi pomôžeme - od návrhu až po realizáciu.</p>
+          <p className="px-6 md:px-0 text-primary-text">Snívate o dizajnovom exteriérovom objekte, alebo o unikátnych interiérových kusoch nábytku? Kontaktujte nás a my Vám radi pomôžeme - od návrhu až po realizáciu.</p>
           <InstagramFeed />
           <SledujteNas />
         </div>
