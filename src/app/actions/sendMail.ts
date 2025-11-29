@@ -1,6 +1,16 @@
-"use server"
+"use server";
 import nodemailer from "nodemailer";
-export async function sendEmail({ name, email, phone, message }: { name: string, email: string, phone: string, message: string }) {
+export async function sendEmail({
+  name,
+  email,
+  phone,
+  message,
+}: {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}) {
   const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
@@ -25,7 +35,7 @@ export async function sendEmail({ name, email, phone, message }: { name: string,
   });
 
   // const directmails = ['studenic.maros@gmail.com', 'cetunawe@gmail.com']
-  const sender = 'studenic.maros@gmail.com';
+  const sender = "studenic.maros@gmail.com";
 
   // const mailData = {
   //     from: {
@@ -49,28 +59,30 @@ export async function sendEmail({ name, email, phone, message }: { name: string,
       to: recipient,
       subject: `Slowood.sk | Vyplneny formular`,
       text: `Bol vyplnený formulár na stránke slowood.sk s nasledujúcimi údajmi: \n Meno: ${name} \n Email: ${email} \n Telefon: ${phone} \n Sprava: ${message}`,
-    }
-
-  }
+    };
+  };
 
   //TODO use recipient mail
-  const RECIPIENT_MAIL = 'slowood@gmail.com';
+  const RECIPIENT_MAIL = "slowood@gmail.com";
   console.log(RECIPIENT_MAIL);
-  const STUDENIC_MAIL = 'studenic.maros@gmail.com';
+  const STUDENIC_MAIL = "studenic.maros@gmail.com";
 
   // TODO add recipient email
-  const promises = [STUDENIC_MAIL, RECIPIENT_MAIL].map((mail) => new Promise((resolve, reject) => {
-    // send mail
-    transporter.sendMail(mailData(mail), (err, info) => {
-      if (err) {
-        console.error(err);
-        reject(err);
-      } else {
-        console.log(info);
-        resolve(info);
-      }
-    });
-  }));
+  const promises = [STUDENIC_MAIL, RECIPIENT_MAIL].map(
+    (mail) =>
+      new Promise((resolve, reject) => {
+        // send mail
+        transporter.sendMail(mailData(mail), (err, info) => {
+          if (err) {
+            console.error(err);
+            reject(err);
+          } else {
+            console.log(info);
+            resolve(info);
+          }
+        });
+      })
+  );
 
   await Promise.all(promises);
 
